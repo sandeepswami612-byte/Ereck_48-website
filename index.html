@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ElectroReck | Club Events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/electrorecklogo.jpg" alt="ElectroReck Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <!-- Authentication buttons -->
+
+        <div class="auth-area">
+
+            <button id="login-btn" class="nav-auth-btn">
+                Login
+            </button>
+
+            <button id="signup-btn" class="nav-auth-btn">
+                Create Account
+            </button>
+
+
+            <!-- Profile -->
+
+            <div id="profile-container" class="profile-container">
+
+                <button id="profile-btn" class="profile-btn">
+                    👤
+                </button>
+
+
+                <!-- Profile dropdown -->
+
+                <div id="profile-menu" class="profile-menu">
+
+                    <button id="account-btn">
+                        Account
+                    </button>
+
+                    <button id="logout-btn">
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <!-- Animated Electrical Background -->
+<div class="hero-effects">
+    <canvas id="circuit-canvas"></canvas>
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <svg class="sine-wave" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <path
+            class="sine-path"
+            d="M0,100 C120,0 240,200 360,100
+               S600,0 720,100
+               S960,200 1080,100
+               S1320,0 1440,100"
+        />
+    </svg>
+</div>
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                WELCOME TO
+            </p>
+
+            <h1>
+                Electro<span>Reck</span>
+            </h1>
+
+            <h2>
+                Innovate. Connect. Electrify.
+            </h2>
+
+            <p>
+                Discover exciting technical, cultural and
+                competitive events organized by ElectroReck.
+            </p>
+
+            <a href="#events" class="hero-button">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EVENTS ================= -->
+
+    <section id="events" class="events-section">
+
+        <div class="section-heading">
+
+            <p>
+                WHAT'S HAPPENING
+            </p>
+
+            <h2>
+                Upcoming Events
+            </h2>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button
+                class="filter-btn active"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="technical">
+                Technical
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="cultural">
+                Cultural
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="sports">
+                Sports
+            </button>
+
+        </div>
+
+
+        <!-- EVENT CARDS -->
+
+        <div class="event-container">
+
+
+            <!-- EVENT 1 -->
+
+            <div
+                class="event-card"
+                data-category="technical">
+
+                <div class="event-image">
+
+                    <img
+                        src="images/circuit.jpg"
+                        alt="Circuit Clash">
+
+                </div>
+
+                <div class="event-content">
+
+                    <span class="category technical">
+                        Technical
+                    </span>
+
+                    <h3>
+                        Vertigo 
+                    </h3>
+
+                    <p>
+                        Test your electronics and
+                        circuit-building skills in an
+                        exciting technical challenge.
+                    </p>
+
+                    <div class="event-info">
+
+                        <p>📅 14 October 2026</p>
+                        <p>⏰ 10:00 AM</p>
+
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        data-event="Vertigo">
+
+                        Register
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 2 -->
+
+            <div
+                class="event-card"
+                data-category="cultural">
+
+                <div class="event-image">
+
+                    <img
+                        src="images/electrofest.jpg"
+                        alt="ElectroFest">
+
+                </div>
+
+                <div class="event-content">
+
+                    <span class="category cultural">
+                        Cultural
+                    </span>
+
+                    <h3>
+                        Electrica
+                    </h3>
+
+                    <p>
+                        A celebration of creativity,
+                        music and talent with the
+                        ElectroReck community.
+                    </p>
+
+                    <div class="event-info">
+
+                        <p>📅 16 October 2026</p>
+                        <p>⏰ 5:00 PM</p>
+
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        data-event="Electrica">
+
+                        Register
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 3 -->
+
+            <div
+                class="event-card"
+                data-category="sports">
+
+                <div class="event-image">
+
+                    <img
+                        src="images/roborush.jpg"
+                        alt="RoboRush">
+
+                </div>
+
+                <div class="event-content">
+
+                    <span class="category sports">
+                        Sports
+                    </span>
+
+                    <h3>
+                       Circuit Cup : Tech sports & speed prototyping
+                    </h3>
+
+                    <p>
+                        Compete, collaborate and race
+                        your way through an exciting
+                        robotics challenge.
+                    </p>
+
+                    <div class="event-info">
+
+                        <p>📅 18 October 2026</p>
+                        <p>⏰ 11:00 AM</p>
+
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        data-event="RoboRush">
+
+                        Register
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <!-- ABOUT ELECTRORECK -->
+<section class="about-section" id="about">
+
+    <div class="about-container">
+
+        <div class="about-label">
+            <span class="about-line"></span>
+            WHO WE ARE
+        </div>
+
+        <h2>
+            More Than a Society.
+            <span>A Community.</span>
+        </h2>
+
+        <p class="about-intro">
+            ElectroReck is a community of curious minds, creative
+            thinkers, and passionate students who believe in
+            learning beyond the classroom. We bring together
+            technology, creativity, culture, and teamwork to
+            create experiences that inspire students to explore
+            their potential and grow together.
+        </p>
+
+        <div class="about-cards">
+
+            <div class="about-card">
+                <div class="about-icon">⚡</div>
+                <h3>Technical Innovation</h3>
+                <p>
+                    Explore electrical engineering, emerging
+                    technologies, practical projects, and
+                    problem-solving through technical events
+                    and collaborative learning.
+                </p>
+            </div>
+
+            <div class="about-card">
+    <div class="about-icon">💡</div>
+    <h3>Innovation & Projects</h3>
+    <p>
+        Turn ideas into reality through hands-on projects,
+        circuit design, embedded systems, and emerging
+        technologies. Experiment, solve real-world problems,
+        and bring innovative ideas to life.
+    </p>
+</div>
+
+            <div class="about-card">
+                <div class="about-icon">🤝</div>
+                <h3>Community & Growth</h3>
+                <p>
+                    Connect with fellow students, exchange ideas,
+                    discover new interests, and develop leadership,
+                    communication, and organizational skills.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="about-bottom">
+            <div>
+                <h3>Learn Together. Create Together. Celebrate Together.</h3>
+                <p>
+                    From technical challenges to cultural
+                    celebrations, every experience is an
+                    opportunity to discover something new.
+                </p>
+            </div>
+
+            <a href="#events" class="about-cta">
+                Explore Our Events →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= LOGIN / CREATE ACCOUNT MODAL ================= -->
+
+    <div id="auth-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-btn"
+                id="auth-close">
+
+                &times;
+
+            </button>
+
+
+            <h2 id="auth-title">
+                Login
+            </h2>
+
+            <p id="auth-subtitle">
+                Login to register for ElectroReck events.
+            </p>
+
+
+            <form id="auth-form">
+
+                <!-- NAME -->
+
+                <div id="name-field">
+
+                    <label for="account-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="account-name"
+                        placeholder="Enter your full name">
+
+                </div>
+
+
+                <!-- BRANCH -->
+
+                <div id="branch-field">
+
+                    <label for="account-branch">
+                        Branch
+                    </label>
+
+                    <input
+                        type="text"
+                        id="account-branch"
+                        placeholder="e.g. Electrical Engineering">
+
+                </div>
+
+
+                <!-- ROLL NUMBER -->
+
+                <div id="roll-field">
+
+                    <label for="account-roll">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="account-roll"
+                        placeholder="Enter your roll number">
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <label for="account-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="account-email"
+                    placeholder="Enter your @nitkkr.ac.in email"
+                    pattern="^[A-Za-z0-9._%+-]+@nitkkr\.ac\.in$"
+                    title="Please enter a valid @nitkkr.ac.in email address"
+                    required>
+
+
+                <!-- PASSWORD -->
+
+                <label for="account-password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="account-password"
+                    placeholder="Enter your password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p id="auth-message"></p>
+
+
+            <p class="auth-switch">
+
+                <span id="switch-text">
+                    Don't have an account?
+                </span>
+
+                <button id="switch-auth">
+                    Create Account
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ACCOUNT MODAL ================= -->
+
+    <div id="account-modal" class="modal">
+
+        <div class="modal-content account-content">
+
+            <button
+                class="close-btn"
+                id="account-close">
+
+                &times;
+
+            </button>
+
+            <div class="account-icon">
+                👤
+            </div>
+
+            <h2>
+                My Account
+            </h2>
+
+            <div class="account-details">
+
+                <div>
+                    <span>Name</span>
+                    <strong id="display-name">-</strong>
+                </div>
+
+                <div>
+                    <span>Branch</span>
+                    <strong id="display-branch">-</strong>
+                </div>
+
+                <div>
+                    <span>Roll Number</span>
+                    <strong id="display-roll">-</strong>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong id="display-email">-</strong>
+                </div>
+
+                <div>
+                    <span>Registered Event</span>
+                    <strong id="display-event">None</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUCCESS MESSAGE ================= -->
+
+    <div id="registration-success" class="success-popup">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Registration Successful!
+            </h3>
+
+            <p id="success-text">
+                You have successfully registered.
+            </p>
+
+            <button id="success-close">
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-brand">
+        <h2>E-RECK</h2>
+        <p>Electrical Engineering Society</p>
+        <a href="https://nitkkr.ac.in/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-institute">
+            NIT Kurukshetra ↗
+        </a>
+    </div>
+
+    <div class="footer-socials">
+
+        <a href="https://www.instagram.com/ereck_nitkkr/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-link">
+            <img src="https://cdn.simpleicons.org/instagram/E4405F"
+                 alt="Instagram">
+            <span>Instagram</span>
+        </a>
+
+        <a href="https://www.linkedin.com/company/erecknitkkr/home/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-link">
+
+    <span class="linkedin-icon" aria-hidden="true">in</span>
+    <span>LinkedIn</span>
+
+</a>
+
+    </div>
+
+    <div class="footer-copyright">
+        © 2026 E-Reck. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
