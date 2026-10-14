@@ -682,3 +682,49 @@ updateRegistrationButtons();
         }
     });
 })();
+
+// ==========================================
+// ANIMATED HERO STATISTICS
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const counters = document.querySelectorAll(".stat-number");
+    const duration = 1500;
+
+    counters.forEach(function (counter) {
+
+        const target = Number(counter.dataset.target);
+
+        if (!Number.isFinite(target) || target < 0) {
+            return;
+        }
+
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Smooth ease-out animation
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+            const currentValue = Math.floor(
+                easedProgress * target
+            );
+
+            counter.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        }
+
+        requestAnimationFrame(updateCounter);
+
+    });
+
+});
